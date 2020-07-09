@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+<style>
+body{
+		background-color: #071e3d;
+	}
+
+
+	.center-column{
+		width:800px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: #fff;
+		border-radius: 3px;
+		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+	}
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delete Task</title>
+</head>
+<body>
+    <div class="center-column">
+    <p>are you sure you want to delete.....{{tasks}}</p>
+    <a href="{% url 'task'%}"> <button class="btn btn-info mb-2" type="submit"><i class="far fa-window-close"></i></button></a>
+        <br>
+    <form method="post" action="">
+        {%csrf_token%}
+        <button class="btn btn-danger" type="submit"><i class="fas fa-trash-alt"></i></button>
+    </form>
+        </div>
+</body>
+</html>
